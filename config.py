@@ -6,7 +6,7 @@ class Config:
 
     #  Update these values with your actual MySQL credentials
     SQLALCHEMY_DATABASE_URI = (
-        'mysql+pymysql://luyaka:YourMySQLPassword@luyaka.mysql.pythonanywhere-services.com/luyaka$itservicedb'
+        'mysql+pymysql://luyaka:phanacey@luyaka.mysql.pythonanywhere-services.com/luyaka$itservicedb'
     )
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
@@ -17,3 +17,4 @@ class Config:
 
     # Optional: external source for departments
     DEPARTMENTS_URL = ''
+
