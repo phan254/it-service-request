@@ -61,7 +61,11 @@ def inject_department_choices():
 # ---------------------- Public: Submit Request ----------------------
 @app.route('/', methods=['GET', 'POST'])
 def index():
+    # ✅ Always reload departments
+    departments = get_departments()
     form = RequestForm()
+    form.department.choices = [(d, d) for d in departments]
+
     if form.validate_on_submit():
         req = Request(
             requester_name=form.requester_name.data,
@@ -74,7 +78,9 @@ def index():
         db.session.commit()
         flash('Request submitted successfully.', 'success')
         return redirect(url_for('index'))
+
     return render_template('index.html', form=form)
+
 
 
 # ---------------------- Admin Login ----------------------
@@ -168,3 +174,4 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()
     app.run(debug=True)
+
