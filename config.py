@@ -1,17 +1,19 @@
 import os
-from dotenv import load_dotenv
-
-load_dotenv()
 
 class Config:
-    SECRET_KEY = os.getenv("SECRET_KEY", "dev-secret")
-    MYSQL_HOST = os.getenv("MYSQL_HOST", "127.0.0.1")
-    MYSQL_PORT = int(os.getenv("MYSQL_PORT", 3306))
-    MYSQL_USER = os.getenv("MYSQL_USER", "root")
-    MYSQL_PASSWORD = os.getenv("MYSQL_PASSWORD", "")
-    MYSQL_DB = os.getenv("MYSQL_DB", "it_service_db")
-    SQLALCHEMY_DATABASE_URI = f"mysql+pymysql://{MYSQL_USER}:{MYSQL_PASSWORD}@{MYSQL_HOST}:{MYSQL_PORT}/{MYSQL_DB}"
+    # Flask secret key
+    SECRET_KEY = os.environ.get('SECRET_KEY', 'supersecretkey')
+
+    #  Update these values with your actual MySQL credentials
+    SQLALCHEMY_DATABASE_URI = (
+        'mysql+pymysql://luyaka:YourMySQLPassword@luyaka.mysql.pythonanywhere-services.com/luyaka$itservicedb'
+    )
+
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    DEPARTMENTS_URL = os.getenv("DEPARTMENTS_URL", "")
-    ADMIN_USERNAME = os.getenv("ADMIN_USERNAME", "admin")
-    ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "admin123")
+
+    # Admin login
+    ADMIN_USERNAME = 'admin'
+    ADMIN_PASSWORD = 'admin123'
+
+    # Optional: external source for departments
+    DEPARTMENTS_URL = ''
