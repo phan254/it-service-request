@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Request #{{ r.id }}</h2>
+<p><b>Name:</b> {{ r.requester_name }}</p>
+<p><b>Department:</b> {{ r.department }}</p>
+<p><b>Category:</b> {{ r.category }}</p>
+<p><b>Description:</b><br><pre>{{ r.description }}</pre></p>
+<p><b>Status:</b> {{ r.status }}</p>
+<p><b>Created:</b> {{ r.created_at }}</p>
+<form method="POST">
+  {% if r.status != 'Resolved' %}
+    <button name="action" value="resolve" type="submit">Mark Resolved</button>
+  {% else %}
+    <button name="action" value="set_pending" type="submit">Set Pending</button>
+  {% endif %}
+</form>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Admin Dashboard</h2>
+<div class="stats">
+  <div class="card"><h3>Total Requests</h3><p>{{ total_requests }}</p></div>
+  <div class="card"><h3>Pending</h3><p>{{ pending_requests }}</p></div>
+  <div class="card"><h3>Resolved</h3><p>{{ resolved_requests }}</p></div>
+</div>
+<p style="margin-top: 20px;"><a href="{{ url_for('admin_requests') }}">View All Requests →</a></p>
+{% endblock %}
