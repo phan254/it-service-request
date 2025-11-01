@@ -40,8 +40,8 @@ python app.py
 ```
 
 6. Access:
-- Public: http://localhost:5000
-- Admin: http://localhost:5000/admin/login
+- Public: https://luyaka.pythonanywhere.com/
+- Admin: https://luyaka.pythonanywhere.com/admin/dashboard
 - Credentials: admin/admin123
 
 ## API Endpoints
@@ -71,4 +71,5 @@ Supports Render, PythonAnywhere, Railway. See hosting documentation.
 ---
 **Name**: [Phanuel Disi]
 **Experience**: [3 years]
+
 **Repository**: [GitHub URL]
