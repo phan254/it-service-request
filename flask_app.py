@@ -58,7 +58,6 @@ def inject_department_choices():
         RequestForm.department.choices = []
 
 
-
 # ---------------------- Public: Submit Request ----------------------
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -83,16 +82,15 @@ def index():
 def login():
     form = LoginForm()
     if form.validate_on_submit():
-        # Check admin credentials from config.py
         if (form.username.data == app.config['ADMIN_USERNAME'] and
                 form.password.data == app.config['ADMIN_PASSWORD']):
             login_user(AdminUser())
             flash('Logged in as admin', 'success')
-            # ✅ Redirect to the correct route name
             return redirect(url_for('admin_dashboard'))
         else:
             flash('Invalid credentials. Please try again.', 'danger')
     return render_template('login.html', form=form)
+
 
 # ---------------------- Admin Logout ----------------------
 @app.route('/admin/logout')
