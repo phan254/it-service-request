@@ -73,6 +73,6 @@ Supports Render, PythonAnywhere, Railway. See hosting documentation.
 
 **Experience**: 3 years
 
-**Repository**: [https://github.com/phan254/it-service-request]
+**Repository**: https://github.com/phan254/it-service-request
 
 
