@@ -2,7 +2,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
     min-height: 100vh;
     padding: 20px;
 }
@@ -14,19 +14,19 @@ header {
     margin-bottom: 20px;
 }
 
-header h1 { color: #667eea; margin-bottom: 10px; }
+header h1 { color: #2e7d32; margin-bottom: 10px; }
 
 nav { display: flex; gap: 15px; flex-wrap: wrap; }
 
 nav a {
-    color: #666;
+    color: #444;
     text-decoration: none;
     padding: 8px 15px;
     border-radius: 5px;
     transition: 0.3s;
 }
 
-nav a:hover { background: #667eea; color: white; }
+nav a:hover { background: #2e7d32; color: white; }
 
 main { max-width: 1200px; margin: 0 auto; }
 
@@ -65,7 +65,7 @@ main { max-width: 1200px; margin: 0 auto; }
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #43cea2 0%, #2e7d32 100%);
     color: white;
 }
 
@@ -92,7 +92,7 @@ main { max-width: 1200px; margin: 0 auto; }
 
 .stats .card {
     text-align: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #43cea2 0%, #2e7d32 100%);
     color: white;
 }
 
@@ -106,7 +106,7 @@ table {
 }
 
 table th {
-    background: #667eea;
+    background: #2e7d32;
     color: white;
     padding: 12px;
     text-align: left;
