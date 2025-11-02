@@ -69,8 +69,10 @@ Table: requests
 Supports Render, PythonAnywhere, Railway. See hosting documentation.
 
 ---
-**Name**: [Phanuel Disi]
-**Experience**: [3 years]
+**Name**: Phanuel Disi
+
+**Experience**: 3 years
 
 **Repository**: [https://github.com/phan254/it-service-request]
+
 
