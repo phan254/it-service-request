@@ -9,23 +9,31 @@ class RequestForm(FlaskForm):
         'Your Name',
         validators=[DataRequired(), Length(min=2, max=100)]
     )
-    
+
     department = SelectField(
         'Department',
-        choices=[],  # This will be filled dynamically from the database or API
+        choices=[],  # ✅ Can still be filled dynamically
         validators=[DataRequired()]
     )
-    
-    category = StringField(
+
+    category = SelectField(  # ✅ CHANGED from StringField to SelectField
         'Category',
-        validators=[DataRequired(), Length(min=2, max=100)]
+        choices=[
+            ('Network', 'Network'),
+            ('Software', 'Software'),
+            ('Hardware', 'Hardware'),
+            ('Email', 'Email'),
+            ('Printer', 'Printer'),
+            ('Other', 'Other')
+        ],
+        validators=[DataRequired()]
     )
-    
+
     description = TextAreaField(
         'Description',
         validators=[DataRequired(), Length(min=5)]
     )
-    
+
     submit = SubmitField('Submit Request')
 
 
@@ -35,10 +43,10 @@ class LoginForm(FlaskForm):
         'Username',
         validators=[DataRequired(), Length(min=3, max=50)]
     )
-    
+
     password = PasswordField(
         'Password',
         validators=[DataRequired(), Length(min=3, max=50)]
     )
-    
+
     submit = SubmitField('Login')
